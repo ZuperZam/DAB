@@ -15,7 +15,7 @@ namespace F18I4DABH3Gr25.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public F18I4DABH3Gr25Context() : base("name=F18I4DABH3Gr25Context")
+        public F18I4DABH3Gr25Context() : base("name=Handin3-2")
         {
         }
 
