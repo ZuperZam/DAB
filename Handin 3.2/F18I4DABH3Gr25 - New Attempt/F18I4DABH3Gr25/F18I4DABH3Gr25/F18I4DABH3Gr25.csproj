@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4A6769C5-340A-43B6-96CF-840DF8CC9A6E}</ProjectGuid>
+    <ProjectGuid>{D353CC5A-4EEB-4DFF-B86F-3522E9979374}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -47,10 +47,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -196,18 +196,25 @@
     <Compile Include="Controllers\NamesController.cs" />
     <Compile Include="Controllers\PeopleController.cs" />
     <Compile Include="Controllers\PhonesController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\xTypesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804171120472_Initial.cs" />
-    <Compile Include="Migrations\201804171120472_Initial.Designer.cs">
-      <DependentUpon>201804171120472_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201804200748489_AddressEmail.cs" />
+    <Compile Include="Migrations\201804200748489_AddressEmail.Designer.cs">
+      <DependentUpon>201804200748489_AddressEmail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804200703056_HasSomethingChanged.cs" />
-    <Compile Include="Migrations\201804200703056_HasSomethingChanged.Designer.cs">
-      <DependentUpon>201804200703056_HasSomethingChanged.cs</DependentUpon>
+    <Compile Include="Migrations\201804200756375_NamePeoplePhone.cs" />
+    <Compile Include="Migrations\201804200756375_NamePeoplePhone.Designer.cs">
+      <DependentUpon>201804200756375_NamePeoplePhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804200757405_xType.cs" />
+    <Compile Include="Migrations\201804200757405_xType.Designer.cs">
+      <DependentUpon>201804200757405_xType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804200758309_xType2.cs" />
+    <Compile Include="Migrations\201804200758309_xType2.Designer.cs">
+      <DependentUpon>201804200758309_xType2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
@@ -256,7 +263,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -288,11 +297,17 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804171120472_Initial.resx">
-      <DependentUpon>201804171120472_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804200748489_AddressEmail.resx">
+      <DependentUpon>201804200748489_AddressEmail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804200703056_HasSomethingChanged.resx">
-      <DependentUpon>201804200703056_HasSomethingChanged.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804200756375_NamePeoplePhone.resx">
+      <DependentUpon>201804200756375_NamePeoplePhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804200757405_xType.resx">
+      <DependentUpon>201804200757405_xType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804200758309_xType2.resx">
+      <DependentUpon>201804200758309_xType2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -311,9 +326,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>62689</DevelopmentServerPort>
+          <DevelopmentServerPort>51104</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:62689/</IISUrl>
+          <IISUrl>http://localhost:51104/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -17,6 +17,7 @@ namespace F18I4DABH3Gr25.Models
     
         public F18I4DABH3Gr25Context() : base("name=HandIn3-2")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public System.Data.Entity.DbSet<HandIn2._1.Address> Addresses { get; set; }
@@ -29,6 +30,6 @@ namespace F18I4DABH3Gr25.Models
 
         public System.Data.Entity.DbSet<HandIn2._1.Phone> Phones { get; set; }
 
-        public System.Data.Entity.DbSet<HandIn2._1.xType> xTypes { get; set; }
+        public System.Data.Entity.DbSet<HandIn2._1.xType> Types { get; set; }
     }
 }
